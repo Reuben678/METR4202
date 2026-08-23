@@ -194,3 +194,9 @@ The completed system should allow the TurtleBot3 to autonomously:
 - [ ] Determine when the search/exploration is complete.
 - [ ] Produce a final map showing the explored environment and detected target locations.
 - [ ] Demonstrate the complete system reliably from start to finish.
+
+# Contributors
+- Karan Vijay Shankar: s4710142
+- Reuben
+- Mitchell
+- Ronggeng
