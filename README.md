@@ -176,7 +176,7 @@ Testing
 Optimisation
   ↓
 Final Demonstration
-
+```
 # Final Goal
 
 The completed system should allow the TurtleBot3 to autonomously:
