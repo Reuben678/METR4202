@@ -7,23 +7,7 @@ Develop an autonomous TurtleBot3 Waffle Pi system that can explore an unknown en
 ---
 
 # Project Roadmap
-
-## Phase 1 — Project Setup
-
-- [ ] Set up GitHub repository and ROS 2 workspace.
-- [ ] Establish project structure and development workflow.
-- [ ] Configure TurtleBot3 Waffle Pi.
-- [ ] Confirm the team can build and run the project.
-
-## Phase 2 — Simulation Setup
-
-- [ ] Set up TurtleBot3 Waffle Pi in Gazebo.
-- [ ] Create/configure the simulated environment.
-- [ ] Verify robot movement.
-- [ ] Verify LiDAR, camera, odometry, and TF.
-- [ ] Confirm the simulation runs reliably.
-
-## Phase 3 — Mapping
+## Phase 1 — Mapping
 
 - [ ] Set up SLAM Toolbox.
 - [ ] Connect LiDAR and odometry to SLAM.
@@ -31,7 +15,7 @@ Develop an autonomous TurtleBot3 Waffle Pi system that can explore an unknown en
 - [ ] Visualise and validate the map in RViz2.
 - [ ] Confirm the required map resolution.
 
-## Phase 4 — Autonomous Navigation
+## Phase 2 — Autonomous Navigation
 
 - [ ] Set up and configure Nav2.
 - [ ] Configure planners, controllers, and costmaps.
@@ -39,7 +23,7 @@ Develop an autonomous TurtleBot3 Waffle Pi system that can explore an unknown en
 - [ ] Verify obstacle avoidance.
 - [ ] Test navigation failures and recovery.
 
-## Phase 5 — Autonomous Waypoints
+## Phase 3 — Autonomous Waypoints
 
 - [ ] Create a ROS 2 node for sending navigation goals.
 - [ ] Connect the node to Nav2.
@@ -47,7 +31,7 @@ Develop an autonomous TurtleBot3 Waffle Pi system that can explore an unknown en
 - [ ] Monitor navigation results.
 - [ ] Handle successful and failed navigation attempts.
 
-## Phase 6 — Exploration Algorithm
+## Phase 4 — Exploration Algorithm
 
 - [ ] Process the SLAM occupancy grid.
 - [ ] Identify unexplored areas/frontiers.
@@ -55,7 +39,7 @@ Develop an autonomous TurtleBot3 Waffle Pi system that can explore an unknown en
 - [ ] Rank/select the best exploration location.
 - [ ] Convert the selected location into a safe waypoint.
 
-## Phase 7 — Autonomous Exploration
+## Phase 5 — Autonomous Exploration
 
 - [ ] Connect the exploration algorithm to Nav2.
 - [ ] Automatically navigate between exploration waypoints.
@@ -64,7 +48,7 @@ Develop an autonomous TurtleBot3 Waffle Pi system that can explore an unknown en
 - [ ] Avoid repeatedly visiting the same areas.
 - [ ] Continue until the exploration/search condition is met.
 
-## Phase 8 — Failure Handling
+## Phase 6 — Failure Handling
 
 - [ ] Detect failed navigation plans.
 - [ ] Detect failed navigation execution.
@@ -73,7 +57,7 @@ Develop an autonomous TurtleBot3 Waffle Pi system that can explore an unknown en
 - [ ] Select alternative exploration locations.
 - [ ] Implement appropriate recovery behaviour.
 
-## Phase 9 — ArUco Target Detection
+## Phase 7 — ArUco Target Detection
 
 - [ ] Configure the TurtleBot3 camera.
 - [ ] Implement ArUco marker detection.
@@ -82,7 +66,7 @@ Develop an autonomous TurtleBot3 Waffle Pi system that can explore an unknown en
 - [ ] Transform detections into the map coordinate system.
 - [ ] Store detected target locations.
 
-## Phase 10 — Target Localisation
+## Phase 8 — Target Localisation
 
 - [ ] Validate target position estimates.
 - [ ] Test targets at different distances and angles.
@@ -90,7 +74,7 @@ Develop an autonomous TurtleBot3 Waffle Pi system that can explore an unknown en
 - [ ] Achieve the required approximately 0.5 m accuracy.
 - [ ] Handle repeated detections of the same target.
 
-## Phase 11 — Full System Integration
+## Phase 9 — Full System Integration
 
 - [ ] Combine SLAM, navigation, exploration, and target detection.
 - [ ] Launch the complete system together.
@@ -99,7 +83,7 @@ Develop an autonomous TurtleBot3 Waffle Pi system that can explore an unknown en
 - [ ] Continue exploring after targets are detected.
 - [ ] Ensure all components communicate correctly.
 
-## Phase 12 — Search Completion & Coverage
+## Phase 10 — Search Completion & Coverage
 
 - [ ] Define when the search is considered complete.
 - [ ] Determine whether all required targets have been found.
@@ -108,7 +92,7 @@ Develop an autonomous TurtleBot3 Waffle Pi system that can explore an unknown en
 - [ ] Evaluate how much of the environment was explored.
 - [ ] Assess whether complete coverage can be guaranteed.
 
-## Phase 13 — Testing & Evaluation
+## Phase 11 — Testing & Evaluation
 
 - [ ] Test different starting positions.
 - [ ] Test different environments.
@@ -120,7 +104,7 @@ Develop an autonomous TurtleBot3 Waffle Pi system that can explore an unknown en
 - [ ] Measure target localisation accuracy.
 - [ ] Record and analyse results.
 
-## Phase 14 — Optimisation
+## Phase 12 — Optimisation
 
 - [ ] Improve frontier selection.
 - [ ] Improve exploration efficiency.
@@ -130,7 +114,7 @@ Develop an autonomous TurtleBot3 Waffle Pi system that can explore an unknown en
 - [ ] Improve target localisation.
 - [ ] Improve overall system robustness.
 
-## Phase 15 — Final Demonstration
+## Phase 13 — Final Demonstration
 
 - [ ] Finalise the complete ROS 2 system.
 - [ ] Create a reliable launch procedure.
@@ -197,6 +181,6 @@ The completed system should allow the TurtleBot3 to autonomously:
 
 # Contributors
 - Karan Vijay Shankar: s4710142
-- Reuben
+- Reuben Brown: s4742635
 - Mitchell
 - Ronggeng
