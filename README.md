@@ -135,8 +135,6 @@ Setup
   ↓
 Gazebo + TurtleBot3
   ↓
-Sensors + TF
-  ↓
 SLAM / Mapping
   ↓
 Nav2
