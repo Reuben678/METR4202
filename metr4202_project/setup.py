@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'frontier_search = metr4202_project.frontier_search:main'
         ],
     },
 )
