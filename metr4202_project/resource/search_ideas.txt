@@ -1,0 +1,13 @@
+The following are questions, considerations and potential changes that can
+be made to the frontier search node for future improvement
+
+    1)  Adapative weights, driven by the ratio of UNKNOWN to FREE/OCCUPIED
+        cells in the complete map
+    2)  Begin the algorithm by using the current robot pose (X,Y) to kickstart
+        the BehaviorTreeLog for the algorithm
+    3)  Implement a minimum distance value to break looping control logic
+        (potentially fixed through adaptive weighting that drives information
+        gain over cost/locality)
+    4)  Provide NAV2 goals to costmapping check for further refinement of ideal
+        navigation goals
+    5)  Create interrupt for ArUco detection (tempt ArUco detour)
