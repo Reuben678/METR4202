@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'metr4202_project'
+package_name = 'project-aruco'
 
 setup(
     name=package_name,
@@ -13,10 +13,10 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='rb',
-    maintainer_email='rb@todo.todo',
+    maintainer='mjc',
+    maintainer_email='mitchellcraw64@gmail.com',
     description='TODO: Package description',
-    license='TODO: License declaration',
+    license='Apache-2.0',
     extras_require={
         'test': [
             'pytest',
@@ -24,8 +24,6 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'frontier_search = metr4202_project.frontier_search:main'
-            'util_weight_calc = metr4202_project.weight_calc:main'
         ],
     },
 )

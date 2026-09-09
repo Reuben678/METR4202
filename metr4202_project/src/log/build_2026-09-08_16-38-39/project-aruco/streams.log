@@ -1,0 +1,21 @@
+[1.019s] Invoking command in '/home/mjc/METR4202/METR4202/metr4202_project/src/project-aruco': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/project-aruco build --build-base /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/build install --record /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/install.log --install-scripts $base/lib/project-aruco --single-version-externally-managed install_data
+[1.176s] running egg_info
+[1.176s] writing ../build/project-aruco/project_aruco.egg-info/PKG-INFO
+[1.176s] writing dependency_links to ../build/project-aruco/project_aruco.egg-info/dependency_links.txt
+[1.176s] writing entry points to ../build/project-aruco/project_aruco.egg-info/entry_points.txt
+[1.176s] writing requirements to ../build/project-aruco/project_aruco.egg-info/requires.txt
+[1.177s] writing top-level names to ../build/project-aruco/project_aruco.egg-info/top_level.txt
+[1.180s] reading manifest file '../build/project-aruco/project_aruco.egg-info/SOURCES.txt'
+[1.182s] adding license file 'LICENSE'
+[1.183s] writing manifest file '../build/project-aruco/project_aruco.egg-info/SOURCES.txt'
+[1.183s] running build
+[1.183s] running build_py
+[1.183s] running install
+[1.183s] running install_lib
+[1.184s] running install_data
+[1.184s] running install_egg_info
+[1.185s] removing '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages/project_aruco-0.0.0-py3.10.egg-info' (and everything under it)
+[1.185s] Copying ../build/project-aruco/project_aruco.egg-info to /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages/project_aruco-0.0.0-py3.10.egg-info
+[1.186s] running install_scripts
+[1.200s] writing list of installed files to '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/install.log'
+[1.223s] Invoked command in '/home/mjc/METR4202/METR4202/metr4202_project/src/project-aruco' returned '0': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/project-aruco build --build-base /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/build install --record /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/install.log --install-scripts $base/lib/project-aruco --single-version-externally-managed install_data

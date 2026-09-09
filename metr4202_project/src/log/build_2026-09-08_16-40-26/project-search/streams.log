@@ -1,0 +1,33 @@
+[0.559s] Invoking command in '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build
+[0.730s] running develop
+[0.823s] Removing /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search.egg-link (link to .)
+[0.839s] Invoked command in '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search' returned '0': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build
+[0.840s] Invoking command in '/home/mjc/METR4202/METR4202/metr4202_project/src/project-search': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/project-search build --build-base /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build install --record /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/install.log --install-scripts $base/lib/project-search --single-version-externally-managed install_data --force
+[0.989s] running egg_info
+[0.989s] writing ../build/project-search/project_search.egg-info/PKG-INFO
+[0.992s] writing dependency_links to ../build/project-search/project_search.egg-info/dependency_links.txt
+[0.992s] writing entry points to ../build/project-search/project_search.egg-info/entry_points.txt
+[0.992s] writing requirements to ../build/project-search/project_search.egg-info/requires.txt
+[0.992s] writing top-level names to ../build/project-search/project_search.egg-info/top_level.txt
+[0.993s] reading manifest file '../build/project-search/project_search.egg-info/SOURCES.txt'
+[0.994s] adding license file 'LICENSE'
+[0.995s] writing manifest file '../build/project-search/project_search.egg-info/SOURCES.txt'
+[0.995s] running build
+[0.995s] running build_py
+[0.995s] running install
+[0.995s] running install_lib
+[0.997s] creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search
+[0.997s] copying /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build/lib/project-search/weights.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search
+[0.997s] copying /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build/lib/project-search/__init__.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search
+[0.997s] copying /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build/lib/project-search/frontier_search.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search
+[0.998s] byte-compiling /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search/weights.py to weights.cpython-310.pyc
+[0.998s] byte-compiling /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search/__init__.py to __init__.cpython-310.pyc
+[0.998s] byte-compiling /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search/frontier_search.py to frontier_search.cpython-310.pyc
+[1.000s] running install_data
+[1.000s] copying resource/project-search -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/ament_index/resource_index/packages
+[1.000s] copying package.xml -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search
+[1.001s] running install_egg_info
+[1.002s] Copying ../build/project-search/project_search.egg-info to /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project_search-0.0.0-py3.10.egg-info
+[1.002s] running install_scripts
+[1.015s] writing list of installed files to '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/install.log'
+[1.028s] Invoked command in '/home/mjc/METR4202/METR4202/metr4202_project/src/project-search' returned '0': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/project-search build --build-base /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build install --record /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/install.log --install-scripts $base/lib/project-search --single-version-externally-managed install_data --force

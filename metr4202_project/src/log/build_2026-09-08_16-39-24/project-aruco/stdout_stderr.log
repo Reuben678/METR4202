@@ -1,0 +1,16 @@
+running develop
+running egg_info
+writing project_aruco.egg-info/PKG-INFO
+writing dependency_links to project_aruco.egg-info/dependency_links.txt
+writing entry points to project_aruco.egg-info/entry_points.txt
+writing requirements to project_aruco.egg-info/requires.txt
+writing top-level names to project_aruco.egg-info/top_level.txt
+reading manifest file 'project_aruco.egg-info/SOURCES.txt'
+writing manifest file 'project_aruco.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages/project-aruco.egg-link (link to .)
+
+Installed /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco
+running symlink_data
+symbolically linking /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/resource/project-aruco -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/ament_index/resource_index/packages
+symbolically linking /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/package.xml -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco

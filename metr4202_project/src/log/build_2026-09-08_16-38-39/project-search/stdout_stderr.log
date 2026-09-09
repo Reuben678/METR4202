@@ -1,0 +1,27 @@
+running egg_info
+writing ../build/project-search/project_search.egg-info/PKG-INFO
+writing dependency_links to ../build/project-search/project_search.egg-info/dependency_links.txt
+writing entry points to ../build/project-search/project_search.egg-info/entry_points.txt
+writing requirements to ../build/project-search/project_search.egg-info/requires.txt
+writing top-level names to ../build/project-search/project_search.egg-info/top_level.txt
+reading manifest file '../build/project-search/project_search.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../build/project-search/project_search.egg-info/SOURCES.txt'
+running build
+running build_py
+copying project-search/weights.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build/lib/project-search
+running install
+running install_lib
+copying /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build/lib/project-search/weights.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search
+byte-compiling /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search/weights.py to weights.cpython-310.pyc
+  File "/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search/weights.py", line 23
+    self.latest_map = None:
+                          ^
+SyntaxError: invalid syntax
+
+running install_data
+running install_egg_info
+removing '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project_search-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../build/project-search/project_search.egg-info to /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project_search-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/install.log'

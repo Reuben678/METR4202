@@ -1,0 +1,18 @@
+[0.936s] Invoking command in '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build --no-deps symlink_data --force
+[1.105s] running develop
+[1.191s] running egg_info
+[1.191s] writing project_explore.egg-info/PKG-INFO
+[1.191s] writing dependency_links to project_explore.egg-info/dependency_links.txt
+[1.191s] writing entry points to project_explore.egg-info/entry_points.txt
+[1.192s] writing requirements to project_explore.egg-info/requires.txt
+[1.192s] writing top-level names to project_explore.egg-info/top_level.txt
+[1.193s] reading manifest file 'project_explore.egg-info/SOURCES.txt'
+[1.194s] writing manifest file 'project_explore.egg-info/SOURCES.txt'
+[1.195s] running build_ext
+[1.195s] Creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages/project-explore.egg-link (link to .)
+[1.196s] 
+[1.196s] Installed /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore
+[1.196s] running symlink_data
+[1.196s] symbolically linking /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/resource/project-explore -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/ament_index/resource_index/packages
+[1.196s] symbolically linking /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/package.xml -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore
+[1.238s] Invoked command in '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore' returned '0': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build --no-deps symlink_data --force

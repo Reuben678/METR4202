@@ -1,0 +1,16 @@
+running develop
+running egg_info
+writing project_search.egg-info/PKG-INFO
+writing dependency_links to project_search.egg-info/dependency_links.txt
+writing entry points to project_search.egg-info/entry_points.txt
+writing requirements to project_search.egg-info/requires.txt
+writing top-level names to project_search.egg-info/top_level.txt
+reading manifest file 'project_search.egg-info/SOURCES.txt'
+writing manifest file 'project_search.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search.egg-link (link to .)
+
+Installed /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search
+running symlink_data
+symbolically linking /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/resource/project-search -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/ament_index/resource_index/packages
+symbolically linking /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/package.xml -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search

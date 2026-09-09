@@ -1,0 +1,37 @@
+[0.890s] Invoking command in '/home/mjc/METR4202/METR4202/metr4202_project/src/project-explore': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/project-explore build --build-base /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build install --record /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/install.log --install-scripts $base/lib/project-explore --single-version-externally-managed install_data
+[1.040s] running egg_info
+[1.040s] creating ../build/project-explore/project_explore.egg-info
+[1.040s] writing ../build/project-explore/project_explore.egg-info/PKG-INFO
+[1.041s] writing dependency_links to ../build/project-explore/project_explore.egg-info/dependency_links.txt
+[1.041s] writing entry points to ../build/project-explore/project_explore.egg-info/entry_points.txt
+[1.041s] writing requirements to ../build/project-explore/project_explore.egg-info/requires.txt
+[1.041s] writing top-level names to ../build/project-explore/project_explore.egg-info/top_level.txt
+[1.041s] writing manifest file '../build/project-explore/project_explore.egg-info/SOURCES.txt'
+[1.042s] reading manifest file '../build/project-explore/project_explore.egg-info/SOURCES.txt'
+[1.042s] adding license file 'LICENSE'
+[1.042s] writing manifest file '../build/project-explore/project_explore.egg-info/SOURCES.txt'
+[1.043s] running build
+[1.043s] running build_py
+[1.043s] creating /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build
+[1.043s] creating /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build/lib
+[1.043s] creating /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build/lib/project-explore
+[1.043s] copying project-explore/__init__.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build/lib/project-explore
+[1.043s] copying project-explore/exploration_manager.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build/lib/project-explore
+[1.043s] running install
+[1.044s] running install_lib
+[1.044s] creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages/project-explore
+[1.044s] copying /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build/lib/project-explore/__init__.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages/project-explore
+[1.044s] copying /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build/lib/project-explore/exploration_manager.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages/project-explore
+[1.045s] byte-compiling /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages/project-explore/__init__.py to __init__.cpython-310.pyc
+[1.045s] byte-compiling /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages/project-explore/exploration_manager.py to exploration_manager.cpython-310.pyc
+[1.045s] running install_data
+[1.045s] creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/ament_index
+[1.045s] creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/ament_index/resource_index
+[1.046s] creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/ament_index/resource_index/packages
+[1.046s] copying resource/project-explore -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/ament_index/resource_index/packages
+[1.046s] copying package.xml -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore
+[1.046s] running install_egg_info
+[1.047s] Copying ../build/project-explore/project_explore.egg-info to /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages/project_explore-0.0.0-py3.10.egg-info
+[1.048s] running install_scripts
+[1.062s] writing list of installed files to '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/install.log'
+[1.079s] Invoked command in '/home/mjc/METR4202/METR4202/metr4202_project/src/project-explore' returned '0': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/project-explore build --build-base /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build install --record /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/install.log --install-scripts $base/lib/project-explore --single-version-externally-managed install_data

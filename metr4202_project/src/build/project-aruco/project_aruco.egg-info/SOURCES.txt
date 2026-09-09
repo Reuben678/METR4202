@@ -1,0 +1,12 @@
+package.xml
+setup.cfg
+setup.py
+project-aruco/__init__.py
+project_aruco.egg-info/PKG-INFO
+project_aruco.egg-info/SOURCES.txt
+project_aruco.egg-info/dependency_links.txt
+project_aruco.egg-info/entry_points.txt
+project_aruco.egg-info/requires.txt
+project_aruco.egg-info/top_level.txt
+project_aruco.egg-info/zip-safe
+resource/project-aruco

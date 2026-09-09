@@ -1,0 +1,18 @@
+[0.950s] Invoking command in '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/build --no-deps symlink_data --force
+[1.111s] running develop
+[1.196s] running egg_info
+[1.196s] writing project_aruco.egg-info/PKG-INFO
+[1.196s] writing dependency_links to project_aruco.egg-info/dependency_links.txt
+[1.196s] writing entry points to project_aruco.egg-info/entry_points.txt
+[1.196s] writing requirements to project_aruco.egg-info/requires.txt
+[1.196s] writing top-level names to project_aruco.egg-info/top_level.txt
+[1.198s] reading manifest file 'project_aruco.egg-info/SOURCES.txt'
+[1.198s] writing manifest file 'project_aruco.egg-info/SOURCES.txt'
+[1.199s] running build_ext
+[1.199s] Creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages/project-aruco.egg-link (link to .)
+[1.199s] 
+[1.199s] Installed /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco
+[1.199s] running symlink_data
+[1.199s] symbolically linking /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/resource/project-aruco -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/ament_index/resource_index/packages
+[1.199s] symbolically linking /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/package.xml -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco
+[1.227s] Invoked command in '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco' returned '0': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/build --no-deps symlink_data --force

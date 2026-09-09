@@ -1,0 +1,5 @@
+  File "/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search/weights.py", line 79
+    def calc_util_weights(self, free, unknown, occupied)
+                                                        ^
+SyntaxError: expected ':'
+

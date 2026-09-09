@@ -1,0 +1,18 @@
+[0.936s] Invoking command in '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build --no-deps symlink_data --force
+[1.101s] running develop
+[1.188s] running egg_info
+[1.188s] writing project_search.egg-info/PKG-INFO
+[1.188s] writing dependency_links to project_search.egg-info/dependency_links.txt
+[1.189s] writing entry points to project_search.egg-info/entry_points.txt
+[1.189s] writing requirements to project_search.egg-info/requires.txt
+[1.189s] writing top-level names to project_search.egg-info/top_level.txt
+[1.190s] reading manifest file 'project_search.egg-info/SOURCES.txt'
+[1.190s] writing manifest file 'project_search.egg-info/SOURCES.txt'
+[1.191s] running build_ext
+[1.192s] Creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search.egg-link (link to .)
+[1.192s] 
+[1.192s] Installed /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search
+[1.193s] running symlink_data
+[1.193s] symbolically linking /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/resource/project-search -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/ament_index/resource_index/packages
+[1.193s] symbolically linking /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/package.xml -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search
+[1.227s] Invoked command in '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search' returned '0': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build --no-deps symlink_data --force

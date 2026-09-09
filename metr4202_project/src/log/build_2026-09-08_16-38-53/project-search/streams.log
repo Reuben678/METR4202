@@ -1,0 +1,29 @@
+[0.746s] Invoking command in '/home/mjc/METR4202/METR4202/metr4202_project/src/project-search': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/project-search build --build-base /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build install --record /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/install.log --install-scripts $base/lib/project-search --single-version-externally-managed install_data
+[0.899s] running egg_info
+[0.899s] writing ../build/project-search/project_search.egg-info/PKG-INFO
+[0.899s] writing dependency_links to ../build/project-search/project_search.egg-info/dependency_links.txt
+[0.899s] writing entry points to ../build/project-search/project_search.egg-info/entry_points.txt
+[0.899s] writing requirements to ../build/project-search/project_search.egg-info/requires.txt
+[0.899s] writing top-level names to ../build/project-search/project_search.egg-info/top_level.txt
+[0.900s] reading manifest file '../build/project-search/project_search.egg-info/SOURCES.txt'
+[0.900s] adding license file 'LICENSE'
+[0.901s] writing manifest file '../build/project-search/project_search.egg-info/SOURCES.txt'
+[0.901s] running build
+[0.901s] running build_py
+[0.901s] copying project-search/weights.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build/lib/project-search
+[0.901s] running install
+[0.901s] running install_lib
+[0.902s] copying /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build/lib/project-search/weights.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search
+[0.902s] byte-compiling /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search/weights.py to weights.cpython-310.pyc
+[0.902s]   File "/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search/weights.py", line 79
+[0.903s]     def calc_util_weights(self, free, unknown, occupied)
+[0.903s]                                                         ^
+[0.903s] SyntaxError: expected ':'
+[0.903s] 
+[0.903s] running install_data
+[0.903s] running install_egg_info
+[0.904s] removing '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project_search-0.0.0-py3.10.egg-info' (and everything under it)
+[0.904s] Copying ../build/project-search/project_search.egg-info to /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project_search-0.0.0-py3.10.egg-info
+[0.905s] running install_scripts
+[0.919s] writing list of installed files to '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/install.log'
+[0.954s] Invoked command in '/home/mjc/METR4202/METR4202/metr4202_project/src/project-search' returned '0': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/project-search build --build-base /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build install --record /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/install.log --install-scripts $base/lib/project-search --single-version-externally-managed install_data

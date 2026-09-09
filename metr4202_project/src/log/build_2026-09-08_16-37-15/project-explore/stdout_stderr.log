@@ -1,0 +1,35 @@
+running egg_info
+creating ../build/project-explore/project_explore.egg-info
+writing ../build/project-explore/project_explore.egg-info/PKG-INFO
+writing dependency_links to ../build/project-explore/project_explore.egg-info/dependency_links.txt
+writing entry points to ../build/project-explore/project_explore.egg-info/entry_points.txt
+writing requirements to ../build/project-explore/project_explore.egg-info/requires.txt
+writing top-level names to ../build/project-explore/project_explore.egg-info/top_level.txt
+writing manifest file '../build/project-explore/project_explore.egg-info/SOURCES.txt'
+reading manifest file '../build/project-explore/project_explore.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../build/project-explore/project_explore.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build
+creating /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build/lib
+creating /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build/lib/project-explore
+copying project-explore/__init__.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build/lib/project-explore
+copying project-explore/exploration_manager.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build/lib/project-explore
+running install
+running install_lib
+creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages/project-explore
+copying /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build/lib/project-explore/__init__.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages/project-explore
+copying /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build/lib/project-explore/exploration_manager.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages/project-explore
+byte-compiling /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages/project-explore/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages/project-explore/exploration_manager.py to exploration_manager.cpython-310.pyc
+running install_data
+creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/ament_index
+creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/ament_index/resource_index
+creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/ament_index/resource_index/packages
+copying resource/project-explore -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/ament_index/resource_index/packages
+copying package.xml -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore
+running install_egg_info
+Copying ../build/project-explore/project_explore.egg-info to /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages/project_explore-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/install.log'

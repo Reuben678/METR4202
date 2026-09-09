@@ -1,0 +1,32 @@
+running egg_info
+creating ../build/project-aruco/project_aruco.egg-info
+writing ../build/project-aruco/project_aruco.egg-info/PKG-INFO
+writing dependency_links to ../build/project-aruco/project_aruco.egg-info/dependency_links.txt
+writing entry points to ../build/project-aruco/project_aruco.egg-info/entry_points.txt
+writing requirements to ../build/project-aruco/project_aruco.egg-info/requires.txt
+writing top-level names to ../build/project-aruco/project_aruco.egg-info/top_level.txt
+writing manifest file '../build/project-aruco/project_aruco.egg-info/SOURCES.txt'
+reading manifest file '../build/project-aruco/project_aruco.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../build/project-aruco/project_aruco.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/build
+creating /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/build/lib
+creating /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/build/lib/project-aruco
+copying project-aruco/__init__.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/build/lib/project-aruco
+running install
+running install_lib
+creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages/project-aruco
+copying /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/build/lib/project-aruco/__init__.py -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages/project-aruco
+byte-compiling /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages/project-aruco/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/ament_index
+creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/ament_index/resource_index
+creating /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/ament_index/resource_index/packages
+copying resource/project-aruco -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/ament_index/resource_index/packages
+copying package.xml -> /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco
+running install_egg_info
+Copying ../build/project-aruco/project_aruco.egg-info to /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages/project_aruco-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/install.log'

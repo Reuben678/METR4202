@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+project-explore/__init__.py
+project-explore/exploration_manager.py
+project_explore.egg-info/PKG-INFO
+project_explore.egg-info/SOURCES.txt
+project_explore.egg-info/dependency_links.txt
+project_explore.egg-info/entry_points.txt
+project_explore.egg-info/requires.txt
+project_explore.egg-info/top_level.txt
+project_explore.egg-info/zip-safe
+resource/project-explore

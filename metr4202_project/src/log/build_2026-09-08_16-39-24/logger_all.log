@@ -1,0 +1,268 @@
+[0.121s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.121s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x76e884b783a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x76e884c89510>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x76e884c89510>>, mixin_verb=('build',))
+[0.222s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.222s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.222s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.222s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.222s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.222s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.223s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/mjc/METR4202/METR4202/metr4202_project/src'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['ignore', 'ignore_ament_install']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ignore'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ignore_ament_install'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['colcon_pkg']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'colcon_pkg'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['colcon_meta']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'colcon_meta'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['ros']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ros'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['cmake', 'python']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'cmake'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'python'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['python_setup_py']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'python_setup_py'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ignore'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ignore_ament_install'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['colcon_pkg']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'colcon_pkg'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['colcon_meta']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'colcon_meta'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['ros']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ros'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['cmake', 'python']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'cmake'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'python'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['python_setup_py']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'python_setup_py'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(project-aruco) by extensions ['ignore', 'ignore_ament_install']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(project-aruco) by extension 'ignore'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(project-aruco) by extension 'ignore_ament_install'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(project-aruco) by extensions ['colcon_pkg']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(project-aruco) by extension 'colcon_pkg'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(project-aruco) by extensions ['colcon_meta']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(project-aruco) by extension 'colcon_meta'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(project-aruco) by extensions ['ros']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(project-aruco) by extension 'ros'
+[0.240s] DEBUG:colcon.colcon_core.package_identification:Package 'project-aruco' with type 'ros.ament_python' and name 'project-aruco'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(project-explore) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(project-explore) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(project-explore) by extension 'ignore_ament_install'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(project-explore) by extensions ['colcon_pkg']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(project-explore) by extension 'colcon_pkg'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(project-explore) by extensions ['colcon_meta']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(project-explore) by extension 'colcon_meta'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(project-explore) by extensions ['ros']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(project-explore) by extension 'ros'
+[0.241s] DEBUG:colcon.colcon_core.package_identification:Package 'project-explore' with type 'ros.ament_python' and name 'project-explore'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(project-search) by extensions ['ignore', 'ignore_ament_install']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(project-search) by extension 'ignore'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(project-search) by extension 'ignore_ament_install'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(project-search) by extensions ['colcon_pkg']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(project-search) by extension 'colcon_pkg'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(project-search) by extensions ['colcon_meta']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(project-search) by extension 'colcon_meta'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(project-search) by extensions ['ros']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(project-search) by extension 'ros'
+[0.241s] DEBUG:colcon.colcon_core.package_identification:Package 'project-search' with type 'ros.ament_python' and name 'project-search'
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.256s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/mjc/METR4202/metr4202_ws/install
+[0.256s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 16 installed packages in /home/mjc/METR4202/turtlebot3_ws/install
+[0.257s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 370 installed packages in /opt/ros/humble
+[0.259s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'project-aruco' build argument 'cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'project-aruco' build argument 'cmake_target' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'project-aruco' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'project-aruco' build argument 'cmake_clean_cache' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'project-aruco' build argument 'cmake_clean_first' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'project-aruco' build argument 'cmake_force_configure' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'project-aruco' build argument 'ament_cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'project-aruco' build argument 'catkin_cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'project-aruco' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.285s] DEBUG:colcon.colcon_core.verb:Building package 'project-aruco' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco', 'merge_install': False, 'path': '/home/mjc/METR4202/METR4202/metr4202_project/src/project-aruco', 'symlink_install': True, 'test_result_base': None}
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'project-explore' build argument 'cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'project-explore' build argument 'cmake_target' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-explore' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-explore' build argument 'cmake_clean_cache' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-explore' build argument 'cmake_clean_first' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-explore' build argument 'cmake_force_configure' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-explore' build argument 'ament_cmake_args' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-explore' build argument 'catkin_cmake_args' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-explore' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.286s] DEBUG:colcon.colcon_core.verb:Building package 'project-explore' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore', 'merge_install': False, 'path': '/home/mjc/METR4202/METR4202/metr4202_project/src/project-explore', 'symlink_install': True, 'test_result_base': None}
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-search' build argument 'cmake_args' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-search' build argument 'cmake_target' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-search' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-search' build argument 'cmake_clean_cache' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-search' build argument 'cmake_clean_first' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-search' build argument 'cmake_force_configure' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-search' build argument 'ament_cmake_args' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-search' build argument 'catkin_cmake_args' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'project-search' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.286s] DEBUG:colcon.colcon_core.verb:Building package 'project-search' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search', 'merge_install': False, 'path': '/home/mjc/METR4202/METR4202/metr4202_project/src/project-search', 'symlink_install': True, 'test_result_base': None}
+[0.286s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.287s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.287s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mjc/METR4202/METR4202/metr4202_project/src/project-aruco' with build type 'ament_python'
+[0.287s] Level 1:colcon.colcon_core.shell:create_environment_hook('project-aruco', 'ament_prefix_path')
+[0.290s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.290s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco/hook/ament_prefix_path.ps1'
+[0.290s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco/hook/ament_prefix_path.dsv'
+[0.290s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco/hook/ament_prefix_path.sh'
+[0.291s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.291s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.294s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mjc/METR4202/METR4202/metr4202_project/src/project-explore' with build type 'ament_python'
+[0.294s] Level 1:colcon.colcon_core.shell:create_environment_hook('project-explore', 'ament_prefix_path')
+[0.294s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore/hook/ament_prefix_path.ps1'
+[0.295s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore/hook/ament_prefix_path.dsv'
+[0.295s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore/hook/ament_prefix_path.sh'
+[0.295s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.295s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.298s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mjc/METR4202/METR4202/metr4202_project/src/project-search' with build type 'ament_python'
+[0.298s] Level 1:colcon.colcon_core.shell:create_environment_hook('project-search', 'ament_prefix_path')
+[0.298s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search/hook/ament_prefix_path.ps1'
+[0.299s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search/hook/ament_prefix_path.dsv'
+[0.299s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search/hook/ament_prefix_path.sh'
+[0.299s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.299s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.463s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mjc/METR4202/METR4202/metr4202_project/src/project-aruco'
+[0.464s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.464s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.632s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mjc/METR4202/METR4202/metr4202_project/src/project-explore'
+[0.632s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.632s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.806s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mjc/METR4202/METR4202/metr4202_project/src/project-search'
+[0.806s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.806s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.040s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: dist_info, symlink_data, build_py, upload, init_catalog, alias, rotate, install_headers, bdist_rpm, egg_info, build_ext, update_catalog, test, build_clib, install, install_scripts, develop, install_egg_info, saveopts, easy_install, register, bdist, clean, upload_docs, sdist, bdist_dumb, extract_messages, compile_catalog, install_lib, bdist_egg, build_scripts, setopt, install_data, build, check, bdist_wheel
+[1.041s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: dist_info, symlink_data, build_py, upload, init_catalog, alias, rotate, install_headers, bdist_rpm, egg_info, build_ext, update_catalog, test, build_clib, install, install_scripts, develop, install_egg_info, saveopts, easy_install, register, bdist, clean, upload_docs, sdist, bdist_dumb, extract_messages, compile_catalog, install_lib, bdist_egg, build_scripts, setopt, install_data, build, check, bdist_wheel
+[1.045s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: dist_info, symlink_data, build_py, upload, init_catalog, alias, rotate, install_headers, bdist_rpm, egg_info, build_ext, update_catalog, test, build_clib, install, install_scripts, develop, install_egg_info, saveopts, easy_install, register, bdist, clean, upload_docs, sdist, bdist_dumb, extract_messages, compile_catalog, install_lib, bdist_egg, build_scripts, setopt, install_data, build, check, bdist_wheel
+[1.223s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --multi-version, --editable, --build-directory, --egg-path, --upgrade, --find-links, --install-dir, --user, --always-unzip, --zip-ok, --no-find-links, --allow-hosts, --dry-run, --prefix, --always-copy, --help, --no-deps, --site-dirs, --uninstall, --verbose, --optimize, --no-user-cfg, --script-dir, --version, --local-snapshots-ok, --quiet, --index-url, --exclude-scripts, --record
+[1.224s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/ament_index/resource_index/packages/project-explore
+[1.224s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore/package.xml
+[1.231s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build --no-deps symlink_data --force
+[1.232s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --multi-version, --editable, --build-directory, --egg-path, --upgrade, --find-links, --install-dir, --user, --always-unzip, --zip-ok, --no-find-links, --allow-hosts, --dry-run, --prefix, --always-copy, --help, --no-deps, --site-dirs, --uninstall, --verbose, --optimize, --no-user-cfg, --script-dir, --version, --local-snapshots-ok, --quiet, --index-url, --exclude-scripts, --record
+[1.232s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/ament_index/resource_index/packages/project-search
+[1.232s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search/package.xml
+[1.234s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --multi-version, --editable, --build-directory, --egg-path, --upgrade, --find-links, --install-dir, --user, --always-unzip, --zip-ok, --no-find-links, --allow-hosts, --dry-run, --prefix, --always-copy, --help, --no-deps, --site-dirs, --uninstall, --verbose, --optimize, --no-user-cfg, --script-dir, --version, --local-snapshots-ok, --quiet, --index-url, --exclude-scripts, --record
+[1.234s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/ament_index/resource_index/packages/project-aruco
+[1.234s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco/package.xml
+[1.235s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build --no-deps symlink_data --force
+[1.238s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/build --no-deps symlink_data --force
+[1.513s] Level 1:colcon.colcon_core.shell:create_environment_hook('project-aruco', 'pythonpath_develop')
+[1.514s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/share/project-aruco/hook/pythonpath_develop.ps1'
+[1.515s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco' returned '0': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/build --no-deps symlink_data --force
+[1.515s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/share/project-aruco/hook/pythonpath_develop.dsv'
+[1.516s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-aruco/share/project-aruco/hook/pythonpath_develop.sh'
+[1.518s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco' for CMake module files
+[1.518s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco' for CMake config files
+[1.519s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib'
+[1.519s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/bin'
+[1.519s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/pkgconfig/project-aruco.pc'
+[1.519s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/lib/python3.10/site-packages'
+[1.519s] Level 1:colcon.colcon_core.shell:create_environment_hook('project-aruco', 'pythonpath')
+[1.520s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco/hook/pythonpath.ps1'
+[1.520s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco/hook/pythonpath.dsv'
+[1.520s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco/hook/pythonpath.sh'
+[1.521s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/bin'
+[1.521s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(project-aruco)
+[1.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco/package.ps1'
+[1.522s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco/package.dsv'
+[1.522s] INFO:colcon.colcon_core.shell:Creating package script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco/package.sh'
+[1.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco/package.bash'
+[1.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/project-aruco/package.zsh'
+[1.523s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-aruco/share/colcon-core/packages/project-aruco)
+[1.525s] Level 1:colcon.colcon_core.shell:create_environment_hook('project-search', 'pythonpath_develop')
+[1.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/share/project-search/hook/pythonpath_develop.ps1'
+[1.525s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search' returned '0': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/build --no-deps symlink_data --force
+[1.526s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/share/project-search/hook/pythonpath_develop.dsv'
+[1.526s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-search/share/project-search/hook/pythonpath_develop.sh'
+[1.527s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search' for CMake module files
+[1.527s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search' for CMake config files
+[1.527s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib'
+[1.527s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/bin'
+[1.527s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/pkgconfig/project-search.pc'
+[1.527s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages'
+[1.527s] Level 1:colcon.colcon_core.shell:create_environment_hook('project-search', 'pythonpath')
+[1.528s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search/hook/pythonpath.ps1'
+[1.528s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search/hook/pythonpath.dsv'
+[1.528s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search/hook/pythonpath.sh'
+[1.529s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/bin'
+[1.529s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(project-search)
+[1.529s] INFO:colcon.colcon_core.shell:Creating package script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search/package.ps1'
+[1.529s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search/package.dsv'
+[1.530s] INFO:colcon.colcon_core.shell:Creating package script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search/package.sh'
+[1.530s] INFO:colcon.colcon_core.shell:Creating package script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search/package.bash'
+[1.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/project-search/package.zsh'
+[1.531s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/share/colcon-core/packages/project-search)
+[1.531s] Level 1:colcon.colcon_core.shell:create_environment_hook('project-explore', 'pythonpath_develop')
+[1.531s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/share/project-explore/hook/pythonpath_develop.ps1'
+[1.532s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore' returned '0': PYTHONPATH=/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/build --no-deps symlink_data --force
+[1.532s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/share/project-explore/hook/pythonpath_develop.dsv'
+[1.533s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/build/project-explore/share/project-explore/hook/pythonpath_develop.sh'
+[1.533s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore' for CMake module files
+[1.533s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore' for CMake config files
+[1.534s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib'
+[1.534s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/bin'
+[1.534s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/pkgconfig/project-explore.pc'
+[1.534s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/lib/python3.10/site-packages'
+[1.534s] Level 1:colcon.colcon_core.shell:create_environment_hook('project-explore', 'pythonpath')
+[1.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore/hook/pythonpath.ps1'
+[1.534s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore/hook/pythonpath.dsv'
+[1.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore/hook/pythonpath.sh'
+[1.535s] Level 1:colcon.colcon_core.environment:checking '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/bin'
+[1.535s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(project-explore)
+[1.535s] INFO:colcon.colcon_core.shell:Creating package script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore/package.ps1'
+[1.536s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore/package.dsv'
+[1.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore/package.sh'
+[1.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore/package.bash'
+[1.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/project-explore/package.zsh'
+[1.537s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-explore/share/colcon-core/packages/project-explore)
+[1.537s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.537s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.538s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.538s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.577s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[1.577s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.577s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.577s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.578s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[1.578s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.579s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/local_setup.ps1'
+[1.580s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mjc/METR4202/METR4202/metr4202_project/src/install/_local_setup_util_ps1.py'
+[1.581s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/setup.ps1'
+[1.582s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/local_setup.sh'
+[1.582s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mjc/METR4202/METR4202/metr4202_project/src/install/_local_setup_util_sh.py'
+[1.583s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/setup.sh'
+[1.584s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/local_setup.bash'
+[1.584s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/setup.bash'
+[1.585s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/local_setup.zsh'
+[1.585s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mjc/METR4202/METR4202/metr4202_project/src/install/setup.zsh'

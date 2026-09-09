@@ -1,0 +1,10 @@
+  File "/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search/weights.py", line 15
+    self.__init__(self):
+                       ^
+SyntaxError: invalid syntax
+
+  File "/home/mjc/METR4202/METR4202/metr4202_project/src/install/project-search/lib/python3.10/site-packages/project-search/frontier_search.py", line 204
+    f"Frontier weights are:'
+    ^
+SyntaxError: unterminated string literal (detected at line 204)
+
