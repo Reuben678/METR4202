@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'project-aruco'
+package_name = 'project_explore'
 
 setup(
     name=package_name,
@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'exploration_manager = project_explore.exploration_manager:main',
+            'mst_planner = project_explore.mst_planner:main',
         ],
     },
 )

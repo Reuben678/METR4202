@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'project-explore'
+package_name = 'project_search'
 
 setup(
     name=package_name,
@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'frontier_search = project-search.frontier_search:main'
+            'util_weight_srv = project-search.util_weights:main'
         ],
     },
 )
