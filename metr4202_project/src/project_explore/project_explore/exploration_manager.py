@@ -28,7 +28,7 @@ class ExplorationManager(Node):
         self.state = ExplorationState.INITIALISING
 
         self.mst_planner = MSTPlanner()
-        self.nav2_handler = Nav2Handler(self)
+        self.nav2_handler = Nav2Handler()
 
         self.ordered_frontiers: List[Frontier] = []
         self.visited_positions: List[Tuple[float, float]] = []
@@ -47,9 +47,10 @@ class ExplorationManager(Node):
         )
 
     def dependencies_available(self) -> bool:
-        """Check whether the required systems are available."""
+        """Check whether Nav2 is ready."""
 
-        return self.nav2_handler.server_available()
+        self.nav2_handler.wait_until_active()
+        return True
 
     def request_plan(self) -> List[Frontier]:
         """Request a new ordered plan from the MST Planner."""
@@ -207,6 +208,8 @@ class ExplorationManager(Node):
         elif self.state == ExplorationState.NAVIGATING:
             if not self.navigation_started:
                 self.start_navigation()
+            else:
+                self.nav2_handler.update()
 
         elif self.state == ExplorationState.UPDATING_RECORDS:
             self.update_records()

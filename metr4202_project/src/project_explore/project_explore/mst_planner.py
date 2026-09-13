@@ -2,6 +2,8 @@ from dataclasses import dataclass
 from math import hypot, isfinite
 from typing import Callable, List, Optional, Tuple
 
+import networkx as nx
+
 
 @dataclass(frozen=True)
 class Frontier:
@@ -19,62 +21,34 @@ class Edge:
     cost: float
 
 
-class UnionFind:
-    """Tracks connected components for Kruskal's algorithm."""
-
-    def __init__(self, nodes: List[int]) -> None:
-        self.parent = {node: node for node in nodes}
-        self.rank = {node: 0 for node in nodes}
-
-    def find(self, node: int) -> int:
-        if self.parent[node] != node:
-            self.parent[node] = self.find(self.parent[node])
-        return self.parent[node]
-
-    def union(self, node_a: int, node_b: int) -> bool:
-        root_a = self.find(node_a)
-        root_b = self.find(node_b)
-
-        if root_a == root_b:
-            return False
-
-        if self.rank[root_a] < self.rank[root_b]:
-            root_a, root_b = root_b, root_a
-
-        self.parent[root_b] = root_a
-
-        if self.rank[root_a] == self.rank[root_b]:
-            self.rank[root_a] += 1
-
-        return True
-
-
 class MSTPlanner:
-    """
-    Constructs a frontier graph, calculates an MST and recommends
-    a traversal order rooted at the robot's current position.
-    """
+    """Generates an ordered frontier plan using a minimum spanning tree."""
 
     ROBOT_NODE_ID = -1
 
     def __init__(self, travel_cost_function: Optional[Callable[[Tuple[float, float], Tuple[float, float]], float]] = None) -> None:
-        # Possible improvement: request path from Nav2 ComputePathToPose
-
+        # Nav2 path distance can replace Euclidean distance later.
         self.travel_cost_function = (
             travel_cost_function or self.euclidean_travel_cost
         )
 
     @staticmethod
     def euclidean_travel_cost(start: Tuple[float, float], goal: Tuple[float, float]) -> float:
-        """Temporary travel-cost estimate."""
-        return hypot(goal[0] - start[0], goal[1] - start[1])
+        """Calculate straight-line travel cost."""
+
+        return hypot(
+            goal[0] - start[0],
+            goal[1] - start[1],
+        )
 
     @staticmethod
     def parse_frontiers(data: List[float], rows: int, columns: int) -> List[Frontier]:
         """Convert flattened frontier data into Frontier objects."""
 
         if rows < 0:
-            raise ValueError("The number of rows cannot be negative.")
+            raise ValueError(
+                "The number of rows cannot be negative."
+            )
 
         if columns < 3:
             raise ValueError(
@@ -118,13 +92,18 @@ class MSTPlanner:
             "Robot position has not been connected to TF yet."
         )
 
-    def construct_graph(self, frontiers: List[Frontier], robot_position: Tuple[float, float]) -> Tuple[List[int], List[Edge]]:
+    def construct_graph(self, frontiers: List[Frontier], robot_position: Tuple[float, float]) -> nx.Graph:
         """Construct a complete weighted graph."""
 
-        ids = [frontier.frontier_id for frontier in frontiers]
+        ids = [
+            frontier.frontier_id
+            for frontier in frontiers
+        ]
 
         if len(ids) != len(set(ids)):
-            raise ValueError("Every frontier must have a unique frontier_id.")
+            raise ValueError(
+                "Every frontier must have a unique frontier_id."
+            )
 
         if self.ROBOT_NODE_ID in ids:
             raise ValueError(
@@ -139,8 +118,15 @@ class MSTPlanner:
             },
         }
 
+        graph = nx.Graph()
+
+        for node_id, position in positions.items():
+            graph.add_node(
+                node_id,
+                position=position,
+            )
+
         nodes = list(positions.keys())
-        edges: List[Edge] = []
 
         for index, node_a in enumerate(nodes):
             for node_b in nodes[index + 1:]:
@@ -149,74 +135,61 @@ class MSTPlanner:
                     positions[node_b],
                 )
 
-                # Infinite cost can later represent an unreachable Nav2 path.
                 if isfinite(cost) and cost >= 0.0:
-                    edges.append(Edge(node_a, node_b, cost))
+                    graph.add_edge(
+                        node_a,
+                        node_b,
+                        weight=cost,
+                    )
 
-        return nodes, edges
+        return graph
 
     @staticmethod
-    def generate_mst(nodes: List[int], edges: List[Edge]) -> List[Edge]:
-        """Generate a minimum spanning tree using Kruskal's algorithm."""
+    def generate_mst(graph: nx.Graph) -> nx.Graph:
+        """Generate an MST using NetworkX Kruskal's algorithm."""
 
-        if len(nodes) <= 1:
-            return []
+        if graph.number_of_nodes() <= 1:
+            return graph.copy()
 
-        union_find = UnionFind(nodes)
-        mst_edges: List[Edge] = []
-
-        for edge in sorted(edges, key=lambda item: item.cost):
-            if union_find.union(edge.node_a, edge.node_b):
-                mst_edges.append(edge)
-
-            if len(mst_edges) == len(nodes) - 1:
-                break
-
-        if len(mst_edges) != len(nodes) - 1:
+        if not nx.is_connected(graph):
             raise ValueError(
                 "The graph is disconnected; not every frontier is reachable."
             )
 
-        return mst_edges
+        return nx.minimum_spanning_tree(
+            graph,
+            weight="weight",
+            algorithm="kruskal",
+        )
 
-    def recommended_traversal(self, mst_edges: List[Edge]) -> List[int]:
-        """
-        Produce a depth-first frontier visitation order.
+    def recommended_traversal(self, mst: nx.Graph) -> List[int]:
+        """Generate a depth-first frontier visitation order."""
 
-        Lower-cost neighbouring branches are visited first.
-        The robot node is omitted from the returned list.
-        """
+        if self.ROBOT_NODE_ID not in mst:
+            return []
 
-        adjacency = {}
+        ordered_mst = nx.Graph()
+        ordered_mst.add_nodes_from(mst.nodes(data=True))
 
-        for edge in mst_edges:
-            adjacency.setdefault(edge.node_a, []).append(
-                (edge.node_b, edge.cost)
+        sorted_edges = sorted(
+            mst.edges(data=True),
+            key=lambda edge: edge[2]["weight"],
+        )
+
+        ordered_mst.add_edges_from(sorted_edges)
+
+        traversal_order = list(
+            nx.dfs_preorder_nodes(
+                ordered_mst,
+                source=self.ROBOT_NODE_ID,
             )
-            adjacency.setdefault(edge.node_b, []).append(
-                (edge.node_a, edge.cost)
-            )
+        )
 
-        traversal_order: List[int] = []
-        visited = set()
-
-        def depth_first_search(node: int) -> None:
-            visited.add(node)
-
-            neighbours = sorted(
-                adjacency.get(node, []),
-                key=lambda neighbour: neighbour[1],
-            )
-
-            for neighbour_id, _ in neighbours:
-                if neighbour_id not in visited:
-                    if neighbour_id != self.ROBOT_NODE_ID:
-                        traversal_order.append(neighbour_id)
-
-                    depth_first_search(neighbour_id)
-
-        depth_first_search(self.ROBOT_NODE_ID)
-        return traversal_order
+        return [
+            node_id
+            for node_id in traversal_order
+            if node_id != self.ROBOT_NODE_ID
+        ]
 
     @staticmethod
     def order_frontiers(frontiers: List[Frontier], traversal_order: List[int]) -> List[Frontier]:
@@ -232,16 +205,31 @@ class MSTPlanner:
             for frontier_id in traversal_order
         ]
 
-    def plan(self, frontiers: List[Frontier], robot_position: Tuple[float, float]) -> Tuple[List[Edge], List[Frontier]]:
-        """Run the MST planning process."""
+    @staticmethod
+    def convert_mst_edges(mst: nx.Graph) -> List[Edge]:
+        """Convert NetworkX edges into Edge objects."""
 
-        nodes, graph_edges = self.construct_graph(
+        return [
+            Edge(
+                node_a=node_a,
+                node_b=node_b,
+                cost=edge_data["weight"],
+            )
+            for node_a, node_b, edge_data in mst.edges(data=True)
+        ]
+
+    def plan(self, frontiers: List[Frontier], robot_position: Tuple[float, float]) -> Tuple[List[Edge], List[Frontier]]:
+        """Generate an MST and ordered frontier list."""
+
+        graph = self.construct_graph(
             frontiers,
             robot_position,
         )
 
-        mst_edges = self.generate_mst(nodes, graph_edges)
-        traversal_order = self.recommended_traversal(mst_edges)
+        mst = self.generate_mst(graph)
+        traversal_order = self.recommended_traversal(mst)
+
+        mst_edges = self.convert_mst_edges(mst)
 
         ordered_frontiers = self.order_frontiers(
             frontiers,
@@ -263,7 +251,7 @@ class MSTPlanner:
 
 
 def main() -> None:
-    """Temporary test data until the ROS interfaces are connected."""
+    """Test the MST Planner."""
 
     robot_position = (0.0, 0.0)
 
