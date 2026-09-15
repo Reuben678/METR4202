@@ -1,0 +1,14 @@
+# Ignore colcon outputs in repo
+build/
+install/
+log/
+
+# Python build/cache files
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# IDE files
+.vscode/
+.idea/
+
