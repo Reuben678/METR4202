@@ -25,7 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
             'frontier_search = project_search.frontier_search:main',
-            'util_weight_srv = project_search.util_weights:main',
+            'util_weights = project_search.util_weights:main',
         ],
     },
 )

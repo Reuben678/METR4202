@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from math import hypot, isfinite
 from typing import Callable, List, Optional, Tuple
+from metr4202_interfaces.msg import FrontierArray
+from metr4202_interfaces.srv import GetFrontiers
 
 import networkx as nx
 
@@ -32,6 +34,11 @@ class MSTPlanner:
             travel_cost_function or self.euclidean_travel_cost
         )
 
+        self.frontier_client = self.create_client(
+            GetFrontiers,
+            'get_frontiers'
+        )
+        
     @staticmethod
     def euclidean_travel_cost(start: Tuple[float, float], goal: Tuple[float, float]) -> float:
         """Calculate straight-line travel cost."""
@@ -76,13 +83,25 @@ class MSTPlanner:
 
         return frontiers
 
-    def receive_frontiers(self) -> List[Frontier]:
+    def receive_frontiers(self, timout=5.0) -> List[Frontier]:
         """Request the latest frontiers from the frontier service."""
-
-        # Replace with the frontier-search service request.
-        raise NotImplementedError(
-            "Frontier input has not been connected to ROS yet."
-        )
+        if not self.frontier_client.service_is_ready():
+            self.get_logger().warn("GetFrontiers service not available")
+            return
+        if self.frontier_future is not None and not self.frontier_future.done():
+            return  # Request already made
+        
+        future = self.frontier_client.call_async(GetFrontiers.Request())
+        rclpy.spin_util_future_complete(self, future, timeout)
+        # Get the result of our request
+        resp = future.result()
+        if resp is None or not resp.success:
+            self.get_logger().warn("GetFrontier returned no data")
+            return None
+        info = resp.frontiers
+        frontiers = np.asarray(info.data, dtype=np.float32)
+        frontiers.reshape(info.rows, info.cols)
+        return frontiers
 
     def get_robot_position(self) -> Tuple[float, float]:
         """Get the current robot position from TF."""
@@ -242,6 +261,9 @@ class MSTPlanner:
         """Request current data and generate a new MST plan."""
 
         frontiers = self.receive_frontiers()
+        if frontiers is None:
+            # Something went wrong, so raise exception
+            raise ValueError("MST could not gather frontiers")
         robot_position = self.get_robot_position()
 
         return self.plan(

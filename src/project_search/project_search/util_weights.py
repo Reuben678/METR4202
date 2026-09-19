@@ -1,7 +1,14 @@
-from util_weights.srv import UtilWeights
+"""
+util_weights.py
+Author: Mitchell Crawford (s4584081)
+METR4202, Sem2, 2026
+"""
+
+
+from metr4202_interfaces.srv import UtilWeights
 
 import rclpy
-from rclpy import Node
+from rclpy.node import Node
 
 from nav_msgs.msg import OccupancyGrid
 
@@ -14,10 +21,10 @@ class WeightCalc (Node):
     def __init__(self):
         super().__init__('WeightCalculation')
 
-        self.srv = self.create_service(
+        self.weight_srv = self.create_service(
             UtilWeights,
             'util_weights_service',
-            self.calc_weights_callback
+            self.calc_weights_resp_callback
             )
 
         self.latest_map = None
@@ -27,69 +34,76 @@ class WeightCalc (Node):
         self.grid_sub = self.create_subscription(
             OccupancyGrid,
             '/map',
-            self.occpancy_grid_callback,
+            self.occupancy_grid_callback,
             1
         )
 
-        # Callback functions
-        #____________________________________________________________
-        def occupancy_grid_callback(self, msg:OccupancyGrid):
-            self.latest_map = msg
-            self.process_grid()
+    # Callback functions
+    #____________________________________________________________
+    def occupancy_grid_callback(self, msg:OccupancyGrid):
+        self.latest_map = msg
+        self.process_grid()
+        return
+
+    def calc_weights_resp_callback(self, request, response):
+        
+        response.w_info = self.w_info
+        response.w_cost = self.w_cost
+
+        self.get_logger().info(f"Weights provided were {w_info} & {w_cost}")
+
+        return response
+    
+    # Process occupancy grid data
+    def process_grid(self):
+        if self.latest_map is None:
+            self.get_logger().debug("No new map data received")
             return
 
-        def calc_weights_callback(self, response):
-            
-            response.w_info = self.w_info
-            response.w_cost = self.w_cost
+        # Process latest msg
+        msg = self.latest
+        width = msg.info.width
+        height = msg.info.height
+        resolution = msg.info.resolution
 
-            self.get_logger().info(f"Weights provided were {w_info} & {w_cost}")
+        # Occupancy grid array in 2D
+        grid = np.array(msg.data, dtype=np.int8).reshape((height, width))
+        free, unknown, occupied = count_cells(grid)
+        calc_util_weights(free, unknown, occupied)
 
-            return response
-        
-        # Process occupancy grid data
-        def process_grid(self):
-            if self.latest_map is None:
-                self.get_logger().debug("No new map data received")
-                return
+    def count_cells(self, grid):
+        free_mask = grid == FREE
+        unknown_mask = grid == UNKNOWN
+        occupied_mask = grid == OCCUPIED
 
-            # Process latest msg
-            msg = self.latest
-            width = msg.info.width
-            height = msg.info.height
-            resolution = msg.info.resolution
+        free = np.count_nonzero(free_mask)
+        occupied = np.count_nonzero(occupied_mask)
+        unknown = np.count_nonzero(unknown_mask)
 
-            # Occupancy grid array in 2D
-            grid = np.array(msg.data, dtype=np.int8).reshape((height, width))
-            free, unknown, occupied = count_cells(grid)
-            calc_util_weights(free, unknown, occupied)
+        return free, unknown, occupied
 
-        def count_cells(self, grid):
-            free_mask = grid == FREE
-            unknown_mask = grid == UNKNOWN
-            occupied_mask = grid == OCCUPIED
+    # Calculate the weights of information gain and cost
+    def calc_util_weights(self, free, unknown, occupied):
+        w_info = unknown / (free + occupied)
+        w_cost = 1 - w_info
+        self.w_info
+        self.w_cost
 
-            free = np.count_nonzero(free_mask)
-            occupied = np.count_nonzero(occupied_mask)
-            unknown = np.count_nonzero(unknown_mask)
+def main():
+    rclpy.init()
 
-            return free, unknown, occupied
+    # Create node
+    weight_calc = WeightCalc()
 
-        # Calculate the weights of information gain and cost
-        def calc_util_weights(self, free, unknown, occupied):
-            w_info = unknown / (free + occupied)
-            w_cost = 1 - w_info
-            self.w_info
-            self.w_cost
-
-    def main():
-        rclpy.init()
-
-        weight_calc = WeightCalc()
-
+    try:
+        # Execute node
         rclpy.spin(weight_calc)
-
+    except KeyboardInterrupt:
+        pass
+    finally:
+        # Stop node spinning (destroy and shutdown)
+        weight_calc.destroy_node()
         rclpy.shutdown()
 
-    if __name__ == '__main__':
-        main()
+if __name__ == '__main__':
+    main()

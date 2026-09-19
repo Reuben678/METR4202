@@ -1,0 +1,4 @@
+# Request: empty trigger call
+---
+int8 w_info
+int8 w_cost

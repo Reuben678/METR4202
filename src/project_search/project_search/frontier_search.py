@@ -1,39 +1,20 @@
 """
 frontier_search.py
 Author: Mitchell Crawford (s4584081)
-
-Subscriptions:
-    - BehaviorTreeLog
-    - OccupancyMap
-
-Publishes:
-    - Nav2 Waypoints
-
-Interfaces
-    - UtilWeights [Service]
-
-1) Check for IDLE state
-2) Load occupancy data
-3) Process data for frontiers
-4) Rank and select top frontier utility
-5) Publish Nav2 waypoint
+METR4202, Sem2, 2026
 """
-
-from weight.srv import UtilWeights
 
 import rclpy
 from rclpy.node import Node
 from rclpy.time import Time
 
-import tf2_ros
-from tf2_ros import LookupException, ConnectivityException, \
-                    ExtrapolationException
-
 from nav_msgs.msg import Odometry
 from nav_msgs.msg import OccupancyGrid
 from nav2_msgs.msg import BehaviorTreeLog
 from geometry_msgs.msg import PoseStamped
-from frontier_msgs.msg import FrontierArray
+from metr4202_interfaces.msg import FrontierArray
+from metr4202_interfaces.srv import UtilWeights
+from metr4202_interfaces.srv import GetFrontiers
 
 import numpy as np
 from scipy import ndimage
@@ -60,22 +41,6 @@ class FrontierSearch(Node):
         self.w_info = 1.0
         self.w_cost = 1.0
 
-        # Connect interfaces
-        # ___________________________________________________________
-        self.util_weight_client = self.create_client(
-            UtilWeights,
-            'util_weights_service'
-        )
-
-        # Check if UtilWeights service is available
-        while not self.cli.wait_for_service(timeout_sec = 1.0):
-            self.get_logger().info('UtilWeights service not avail currently...')
-
-        # Service is available
-        self.get_logger().info('UtilWeights service avail')
-        # Send an initial weights request
-        self.send_request()
-
         # Create subscriptions
         # ___________________________________________________________ 
         self.bt_log_sub = self.create_subscription(
@@ -92,11 +57,11 @@ class FrontierSearch(Node):
         )
 
         self.sub_odom = self.create_subscription(
-                    Odometry,
-                    '/odom',
-                    self.odom_callback,
-                    10
-                )
+            Odometry,
+            '/odom',
+            self.odom_callback,
+            10
+        )
 
         # Create publishers
         # ___________________________________________________________
@@ -104,6 +69,32 @@ class FrontierSearch(Node):
             PoseStamped,
             'frontiers',
             10
+        )
+
+        # Create Interfaces
+        # ___________________________________________________________
+
+        self.weight_client = self.create_client(
+            UtilWeights,
+            'get_util_weights'
+            )
+        
+        for _ in range(10):
+            if self.weight_client.wait_for_service(timeout_sec=1.0):
+                break
+                self.get_logger().info('UtilWeights service not avail')
+            else:
+                self.get_logger().error('UtilWeights never available')
+                raise RuntimeError('UtilWeights service never became available')
+        # Service is available
+        self.get_logger().info('UtilWeights service avail')
+        # Send an initial weights request
+        self.send_request()
+
+        self.frontier_srv = self.create_service(
+            FrontierData,
+            'frontier_data_service',
+            self.frontier_resp_callback
         )
        
        # Initialisation complete
@@ -123,30 +114,45 @@ class FrontierSearch(Node):
     # Callback functions
     # _______________________________________________________________
 
-    def weights_request(self):
+    def frontier_resp_callback(self, request, response):
+        if self.latest_map is None:
+            response.succes = False
+            return response
+        # Update our map information
+        info = self.latest_map.info
+
+        clusters = cluster_frontiers(process_grid())
+        # Check if clusters were found
+        if not clusters:
+            self.get_logger().info("No frontiers were found within the grid")
+            return
+        self.get_logger().info(f"{len(clusters)} frontiers(s) found")
+
+        response.frontiers = self.package_frontiers(clusters, 
+                                info.resolution,
+                                info.origin.position
+                            )
+        response.success = True
+        return response        
+
+    def weights_request(self, timeout = 5.0):
         
-        request = UtilWeights.Request()
-
-        future = self.util_weights_client.call_async(request)
-
-        future.add_done_callback(self.util_w_resp_callback)
-
-        
-    def util_w_resp_callback(self, future):
-        # Process the response of our service request
-        try:
-            response = future.result()
-
-            self.w_info = response.w_info
+        if not self.weight_client(timout_sec=timeout):
+            return None
+        # Send a call to the UtilWeights server
+        future = self.weights_client.call_async(UtilWeights.Request())
+        # Spin this call until we get a response (or timeout)
+        rclpy.spin_until_future_complete(self.future, timeout_sec = timeout)
+        response = future.result()
+        # Check if we got a response
+        if response is not None:
+            # Process the weights from this response
             self.w_cost = response.w_cost
-
-            self.get_logger().info(
-                f"Frontier weights are:' \
-                    Info: {w_info}, ' \
-                    Cost: {w_cost}")
-
-        except Exception as e:
-            self.get_logger().error(f"UtilWeights service call failed! {e}")
+            self.w_info = response.w_info
+            return
+        # Response was empty
+        self.get_logger().warn("UtilWeights returned no response")
+        return None
 
 
     # Callback to read from BehaviorTreeLog topic
@@ -156,8 +162,8 @@ class FrontierSearch(Node):
                     event.previous_status == "RUNNING" and \
                     event.current_status in BT_TRIGGER_STATUS:
                 self.send_request() # Request new weights before frontier search
-                self.process_grid() # Process new frontiers
-                break
+                return
+        return
 
     def odom_callback(self, msg: Odometry):
         self.latest_odom = msg
@@ -245,15 +251,20 @@ class FrontierSearch(Node):
     Pacakge frontiers for publishing
     """
     def package_frontiers(self, clusters, resolution, origin):
-        
-        for c in clusters:
-            rows = [
-                (c["label"], c["size"],
-                origin.x + (c["centroid_px"][0] + 0.5) * resolution,
-                origin.y + (c["centroid_py"][1] + 0.5) * resolution)
-            ]          
-        packaged = np.array(rows, dtype=np.float32).reshape(-1, 4)
-        return packaged
+        rows = [
+            (c["label"], c["size"],
+            origin.x + (c["centroid_px"][0] + 0.5) * resolution,
+            origin.y + (c["centroid_px"][1] + 0.5) * resolution)
+            for c in clusters
+        ]
+        arr = np.array(rows, dtype=np.float32).reshape(-1, 4)
+
+        msg = FrontierArray()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = "map"
+        msg.rows, msg.cols = arr.shape
+        msg.data = arr.ravel().tolist()
+        return msg
 
     """
     Publish the packaged frontiers data
@@ -295,31 +306,7 @@ class FrontierSearch(Node):
 
         # 4) Determine mask grid for frontiers
         frontier_mask = find_frontier_mask(grid)
-        
-        # 5) Determine clusters of frontiers using mask
-        clusters = cluster_frontiers(frontier_mask, min_size=MIN_FRONTIER_SIZE)
-
-        # Check if clusters were found
-        if not clusters:
-            self.get_logger().info("No frontiers were found within the grid")
-            return
-        self.get_logger().info(f"{len(clusters)} frontiers(s) found")
-
-        # -) Rank clusters
-        #ranked = score_frontiers(clusters, resolution, origin_x, origin_y, robot_pose)
-
-        # 6) Package frontier clusters
-        package = package_frontiers(clusters, resolution, origin)
-        
-        # 7) Publish frontier data
-        publish_package(package)
-
-        self.get_logger().info(
-            f"goal=({goal.pose.position.x:.2f},{goal.pose.position.y:.2f}) "
-            f"robot=({robot_pose[0]:.2f},{robot_pose[1]:.2f})")
-
-        # Publish our new goal!!!
-        self.goal_pub.publish(goal) 
+        return frontier_mask
 
 def main():
     rclpy.init()

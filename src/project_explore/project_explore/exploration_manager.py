@@ -7,6 +7,7 @@ from rclpy.node import Node
 
 from mst_planner import Frontier, MSTPlanner
 from nav2_handler import NavigationResult, Nav2Handler
+from frontier_msgs.msg import FrontierArray
 
 
 class ExplorationState(Enum):
@@ -44,7 +45,7 @@ class ExplorationManager(Node):
         self.timer = self.create_timer(
             0.10,
             self.step,
-        )
+        )        
 
     def dependencies_available(self) -> bool:
         """Check whether Nav2 is ready."""
